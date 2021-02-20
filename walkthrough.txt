@@ -1,0 +1,191 @@
+~/react_flask_crud
+❯ pwd
+/home/jamesm/react_flask_crud
+
+
+* Initialize front end / back end directories
+
+npx create-react-app client
+
+mkdir api
+
+
+* Create and Activate Virtual Environment
+
+cd api
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+
+* Deactivate Virtual Environment
+
+deactivate
+
+
+* Install python modules
+* If python-dotenv is installed, running the flask command will set environment variables defined in the files .env and .flaskenv
+
+pip install flask python-dotenv
+
+
+* Initialize Flask app
+
+touch api.py
+
+
+* Flask imports the application from the place indicated by the FLASK_APP environment variable. 
+To avoid having to manually set this variable every time, create e a .flaskenv file, which Flask automatically 
+imports into the environment on startup if it finds the python-dotenv package installed.
+
+touch .flaskenv
+
+FLASK_APP=api.py
+FLASK_ENV=development
+
+
+* At this point this basic Flask project is complete. To make sure that it is working well you can start it
+
+flask run
+
+
+* React Proxy Configuration
+
+* The React project can be configured to redirect any requests it receives on its port 3000 that it does not understand into another server. 
+* This is configured simply by adding a proxy key at the bottom package.json:
+
+/client/package.json
+
+"proxy": "http://localhost:5000"
+
+"start_api": "cd ../api && venv/bin/flask run --no-debugger",
+
+* Adding the Flask Project to Git
+
+touch api/.gitignore
+
+Initialize git repo in project root
+
+Remove .git folder from /client
+
+* Running the Combined Project
+
+cd client
+
+* Start Front End
+
+yarn start
+
+* Start Back End
+
+yarn start_api
+
+
+* pip freeze and install
+
+* You can freeze requirements on one machine and then later on a different machine or on a clean environment 
+* You'll get the an identical environment with the exact same dependencies installed as you had in the original 
+* environment where you generated the frozen-requirements.txt
+
+pip freeze > frozen-requirements.txt
+
+pip install -r frozen-requirements.txt
+
+
+* Cloning repo and initializing repo
+
+cd api
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install -r frozen-requirements.txt
+
+yarn --version
+
+yarn install
+
+
+* SQLAlchemy
+
+* SQLite - file-nased db system (no server required)
+
+* SQLAlchemy is an object-relational mapper (ORM)
+
+* Works with Python objects - no knowledge of SQL is required
+
+pip install flask-sqlalchemy
+
+
+* Define and Run Flask CLI Commands
+
+~/react_flask_crud/api
+venv ❯ flask db_create
+
+pip install flask-marshmallow
+
+
+* Flask JWT Extended
+
+pip install flask-jwt-extended
+
+* Setting up email and lost password*
+
+pip install Flask-Mail
+
+
+* Client packages
+
+yarn add axios react-router-dom redux react-redux redux-thunk formik dayjs node-sass
+
+
+* Client Folder Structure
+
+~/react_flask_crud/client/src
+venv ❯ rm App.css App.test.js index.css logo.svg reportWebVitals.js setupTests.js
+
+~/react_flask_crud/client/src 
+venv ❯ mkdir actions assets components reducers
+
+
+* Configure Sass
+
+~/react_flask_crud/client/src 
+venv ❯ touch index.scss
+
+
+* Configure reducer index
+
+~/react_flask_crud/client/src/reducers
+venv ❯ touch index.js
+
+
+* Configure action types
+
+~/react_flask_crud/client/src/actions
+venv ❯ touch types.js test.js
+
+
+* Create Components and Routes
+
+~/react_flask_crud/client/src
+❯ mkdir ./components/test
+
+~/react_flask_crud/client/src
+❯ touch ./components/test/Test.js
+
+~/react_flask_crud/client/src
+❯ touch ./components/test/Test.scss
+
+
+* ES7 React/Redux/GraphQL/React-Native snippets
+
+* Create functional arrow component
+rafce tab
+
+
+* Enable Emmet support for JSX in Visual Studio Code | React
+
+https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-react-f1f5dfe8809c
