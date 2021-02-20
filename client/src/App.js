@@ -1,20 +1,19 @@
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+// COMPONENTS
+import Nav from "./components/nav/Nav";
+import Landing from "./components/landing/Landing";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

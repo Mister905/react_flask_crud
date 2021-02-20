@@ -82,6 +82,58 @@ yarn start
 yarn start_api
 
 
+* Enable Emmet support for JSX in Visual Studio Code | React
+
+https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-react-f1f5dfe8809c
+
+* ES7 React/Redux/GraphQL/React-Native snippets
+
+* Client packages
+
+yarn add axios react-router-dom redux react-redux redux-thunk formik dayjs node-sass materialize-css@next
+
+* Client Folder Structure
+
+~/react_flask_crud/client/src
+venv ❯ rm App.css App.test.js index.css logo.svg reportWebVitals.js setupTests.js
+
+~/react_flask_crud/client/src 
+venv ❯ mkdir actions assets components reducers
+
+
+* Configure Sass
+
+~/react_flask_crud/client/src/assets/scss 
+venv ❯ touch index.scss
+
+
+* Configure reducer index
+
+~/react_flask_crud/client/src/reducers
+venv ❯ touch index.js
+
+
+* Configure action types
+
+~/react_flask_crud/client/src/actions
+venv ❯ touch types.js test.js
+
+
+* Create Components and Routes
+
+~/react_flask_crud/client/src
+❯ mkdir ./components/test
+
+~/react_flask_crud/client/src
+❯ touch ./components/test/Test.js
+
+~/react_flask_crud/client/src
+❯ touch ./components/test/Test.scss
+
+* Create functional arrow component
+rafce tab
+
+
 * pip freeze and install
 
 * You can freeze requirements on one machine and then later on a different machine or on a clean environment 
@@ -134,58 +186,3 @@ pip install flask-jwt-extended
 * Setting up email and lost password*
 
 pip install Flask-Mail
-
-
-* Client packages
-
-yarn add axios react-router-dom redux react-redux redux-thunk formik dayjs node-sass
-
-
-* Client Folder Structure
-
-~/react_flask_crud/client/src
-venv ❯ rm App.css App.test.js index.css logo.svg reportWebVitals.js setupTests.js
-
-~/react_flask_crud/client/src 
-venv ❯ mkdir actions assets components reducers
-
-
-* Configure Sass
-
-~/react_flask_crud/client/src 
-venv ❯ touch index.scss
-
-
-* Configure reducer index
-
-~/react_flask_crud/client/src/reducers
-venv ❯ touch index.js
-
-
-* Configure action types
-
-~/react_flask_crud/client/src/actions
-venv ❯ touch types.js test.js
-
-
-* Create Components and Routes
-
-~/react_flask_crud/client/src
-❯ mkdir ./components/test
-
-~/react_flask_crud/client/src
-❯ touch ./components/test/Test.js
-
-~/react_flask_crud/client/src
-❯ touch ./components/test/Test.scss
-
-
-* ES7 React/Redux/GraphQL/React-Native snippets
-
-* Create functional arrow component
-rafce tab
-
-
-* Enable Emmet support for JSX in Visual Studio Code | React
-
-https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-react-f1f5dfe8809c
